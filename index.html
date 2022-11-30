@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+<title>Analog Clock</title>
+<script type="text/javascript" src="./Scripts/Main.js" charset="UTF-8"></script>
+<style>
+@keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotateArms {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.clock {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 0px 0px 10px #222;
+  border-radius: 200px;
+  position: relative;
+}
+
+.center,
+.minute-lines > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+.knob {
+  width: 13.3333333333px;
+  height: 13.3333333333px;
+  background: #111;
+  border-radius: 13.3333333333px;
+  z-index: 4;
+}
+
+.arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left 0;
+  -webkit-transform-origin: top left 0;
+  -moz-transform-origin: top left 0;
+  z-index: 2;
+  width: 0;
+  animation: rotateArms linear 60s infinite;
+  -webkit-animation: rotateArms linear 60s infinite;
+  -moz-animation: rotateArms linear 60s infinite;
+}
+
+.minute.arm {
+  height: 76.9230769231px;
+  box-shadow: 0 0 0 2px #444;
+  animation-duration: 3600s;
+  -webkit-animation-duration: 3600s;
+  -moz-animation-duration: 3600s;
+}
+
+.hour.arm {
+  height: 55.5555555556px;
+  box-shadow: 0 0 0 3.3333333333px #333;
+  animation-duration: 43200s;
+  -webkit-animation-duration: 43200s;
+  -moz-animation-duration: 43200s;
+}
+
+.second.arm {
+  height: 90.9090909091px;
+  box-shadow: 0 0 0 1.3333333333px #a00;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.minute-lines > .min-0 {
+  transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+.minute-lines > .min-1 {
+  transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+}
+
+.minute-lines > .min-2 {
+  transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+}
+
+.minute-lines > .min-3 {
+  transform: rotate(18deg);
+  -moz-transform: rotate(18deg);
+  -webkit-transform: rotate(18deg);
+}
+
+.minute-lines > .min-4 {
+  transform: rotate(24deg);
+  -moz-transform: rotate(24deg);
+  -webkit-transform: rotate(24deg);
+}
+
+.minute-lines > .min-5 {
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+}
+
+.minute-lines > .min-6 {
+  transform: rotate(36deg);
+  -moz-transform: rotate(36deg);
+  -webkit-transform: rotate(36deg);
+}
+
+.minute-lines > .min-7 {
+  transform: rotate(42deg);
+  -moz-transform: rotate(42deg);
+  -webkit-transform: rotate(42deg);
+}
+
+.minute-lines > .min-8 {
+  transform: rotate(48deg);
+  -moz-transform: rotate(48deg);
+  -webkit-transform: rotate(48deg);
+}
+
+.minute-lines > .min-9 {
+  transform: rotate(54deg);
+  -moz-transform: rotate(54deg);
+  -webkit-transform: rotate(54deg);
+}
+
+.minute-lines > .min-10 {
+  transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+}
+
+.minute-lines > .min-11 {
+  transform: rotate(66deg);
+  -moz-transform: rotate(66deg);
+  -webkit-transform: rotate(66deg);
+}
+
+.minute-lines > .min-12 {
+  transform: rotate(72deg);
+  -moz-transform: rotate(72deg);
+  -webkit-transform: rotate(72deg);
+}
+
+.minute-lines > .min-13 {
+  transform: rotate(78deg);
+  -moz-transform: rotate(78deg);
+  -webkit-transform: rotate(78deg);
+}
+
+.minute-lines > .min-14 {
+  transform: rotate(84deg);
+  -moz-transform: rotate(84deg);
+  -webkit-transform: rotate(84deg);
+}
+
+.minute-lines > .min-15 {
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+.minute-lines > .min-16 {
+  transform: rotate(96deg);
+  -moz-transform: rotate(96deg);
+  -webkit-transform: rotate(96deg);
+}
+
+.minute-lines > .min-17 {
+  transform: rotate(102deg);
+  -moz-transform: rotate(102deg);
+  -webkit-transform: rotate(102deg);
+}
+
+.minute-lines > .min-18 {
+  transform: rotate(108deg);
+  -moz-transform: rotate(108deg);
+  -webkit-transform: rotate(108deg);
+}
+
+.minute-lines > .min-19 {
+  transform: rotate(114deg);
+  -moz-transform: rotate(114deg);
+  -webkit-transform: rotate(114deg);
+}
+
+.minute-lines > .min-20 {
+  transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.minute-lines > .min-21 {
+  transform: rotate(126deg);
+  -moz-transform: rotate(126deg);
+  -webkit-transform: rotate(126deg);
+}
+
+.minute-lines > .min-22 {
+  transform: rotate(132deg);
+  -moz-transform: rotate(132deg);
+  -webkit-transform: rotate(132deg);
+}
+
+.minute-lines > .min-23 {
+  transform: rotate(138deg);
+  -moz-transform: rotate(138deg);
+  -webkit-transform: rotate(138deg);
+}
+
+.minute-lines > .min-24 {
+  transform: rotate(144deg);
+  -moz-transform: rotate(144deg);
+  -webkit-transform: rotate(144deg);
+}
+
+.minute-lines > .min-25 {
+  transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+}
+
+.minute-lines > .min-26 {
+  transform: rotate(156deg);
+  -moz-transform: rotate(156deg);
+  -webkit-transform: rotate(156deg);
+}
+
+.minute-lines > .min-27 {
+  transform: rotate(162deg);
+  -moz-transform: rotate(162deg);
+  -webkit-transform: rotate(162deg);
+}
+
+.minute-lines > .min-28 {
+  transform: rotate(168deg);
+  -moz-transform: rotate(168deg);
+  -webkit-transform: rotate(168deg);
+}
+
+.minute-lines > .min-29 {
+  transform: rotate(174deg);
+  -moz-transform: rotate(174deg);
+  -webkit-transform: rotate(174deg);
+}
+
+.minute-lines {
+  width: 100%;
+  height: 100%;
+}
+
+.minute-lines > div::before,
+.minute-lines > div::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  top: 88.8888888889px;
+  box-shadow: 0px 0px 0px 0.5px #000;
+}
+
+.minute-lines > div::after {
+  bottom: 88.8888888889px;
+  top: auto;
+}
+
+div.long::before,
+div.long::after {
+  height: 9.0909090909px;
+  top: 84.4772967265px;
+}
+
+div.long::after {
+  bottom: 84.4772967265px;
+  top: auto;
+}
+
+div.dark::before,
+div.dark::after {
+  box-shadow: 0px 0px 0px 1px #000;
+}
+
+@media (prefers-reduced-motion) {
+  .arm.second {
+    animation-timing-function: steps(12);
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="clock center">
+  <div class="knob center"></div>
+  <div class="box seconds">
+    <div class="arm second"></div>
+  </div>
+  <div class="box minutes">
+    <div class="arm minute"></div>
+  </div>
+  <div class="box hours">
+    <div class="arm hour"></div>
+  </div>
+  <div class="minute-lines">
+    <div class="min-0 long dark"></div>
+    <div class="min-1"></div>
+    <div class="min-2"></div>
+    <div class="min-3"></div>
+    <div class="min-4"></div>
+    <div class="min-5 dark"></div>
+    <div class="min-6"></div>
+    <div class="min-7"></div>
+    <div class="min-8"></div>
+    <div class="min-9"></div>
+    <div class="min-10 dark"></div>
+    <div class="min-11"></div>
+    <div class="min-12"></div>
+    <div class="min-13"></div>
+    <div class="min-14"></div>
+    <div class="min-15 long dark"></div>
+    <div class="min-16"></div>
+    <div class="min-17"></div>
+    <div class="min-18"></div>
+    <div class="min-19"></div>
+    <div class="min-20 dark"></div>
+    <div class="min-21"></div>
+    <div class="min-22"></div>
+    <div class="min-23"></div>
+    <div class="min-24"></div>
+    <div class="min-25 dark"></div>
+    <div class="min-26"></div>
+    <div class="min-27"></div>
+    <div class="min-28"></div>
+    <div class="min-29"></div>
+  </div>
+</div>
+      <script id="rendered-js" >
+var date = new Date();
+var seconds = date.getSeconds() * 6;
+var minutes = date.getMinutes() * 6 + seconds / 60;
+var hours = 180 + date.getHours() % 12 * 30 + minutes / 15;
+document.querySelector(".box.seconds").style.transform = "rotate(" + (180 + seconds) + "deg)";
+document.querySelector(".box.minutes").style.transform = "rotate(" + (180 + minutes) + "deg)";document.querySelector(".box.hours").style.transform = "rotate(" + hours + "deg)";
+    </script>
+</body>
+</html>
